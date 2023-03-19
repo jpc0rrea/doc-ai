@@ -9,7 +9,7 @@ def construct_index(text_file):
     os.makedirs(directory_path, exist_ok=True)
 
     with open(os.path.join(directory_path, "uploaded_file.txt"), "w") as f:
-        f.write(text_file.getvalue())
+        f.write(text_file.getvalue().decode("utf-8"))
 
     # set maximum input size
     max_input_size = 4096
